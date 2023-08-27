@@ -9,7 +9,7 @@ Netflix is an America subscription based streaming service that offers a wide va
 
 
 ## Project Objective
-Through the utilization of SQL and Tableau, we aim to orchestrate the transformation and manipulation of data, complemented by the delivery of insightful visualizations. Our goal is to use these tools in order to extract insights and culminate an enhanced comprehension of audience preferences and content dynamics. 
+Through the utilization of Microsoft SQL Server Management Studio and Tableau Public, we aim to orchestrate the transformation and manipulation of data, complemented by the delivery of insightful visualizations. Our goal is to use these tools in order to extract insights and culminate an enhanced comprehension of audience preferences and content dynamics. 
 
 ## Data Exploration & Analysis
 These 3 variables were imported as floats, but we are going to round to the tenth for simplication purposes.
