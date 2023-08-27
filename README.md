@@ -182,7 +182,7 @@ ORDER BY num_of_movies_directed DESC, avg_score DESC
 
 
 
-### Individual Average IMDB Score of Actors who have Acted 10+ Movies
+### Individual Average IMDB Score of Actors who have Acted 15+ Movies
 ```sql
 SELECT cred.name, COUNT(*) AS num_of_movies_acted, ROUND(AVG(net.imdb_score),1) AS avg_score
 FROM Netflix net
@@ -190,22 +190,24 @@ JOIN credits cred
 ON net.id = cred.id
 WHERE cred.role = 'ACTOR' AND net.imdb_score IS NOT NULL
 GROUP BY cred.name
-HAVING COUNT(*) >= 10
+HAVING COUNT(*) >= 15
 ORDER BY num_of_movies_acted DESC, avg_score DESC
 ```
+![Screenshot (283)](https://github.com/mbalderrama23/NetflixProject/assets/110944925/ef7943d3-20c9-4a55-9c11-242758d2ab0b) ![Screenshot (284)](https://github.com/mbalderrama23/NetflixProject/assets/110944925/209d9739-21ad-43c7-9cef-cd5d87b41615)
 
-### Average IMDB Score of Shows with Single Season
+
+
+### Average IMDB Score of Shows with Single vs Multiple Seasons
 ```sql
+-- single season
 SELECT AVG(imdb_score) AS avg_imdb_score_sing
 FROM(
 SELECT seasons, imdb_score
 FROM Netflix
 WHERE type = 'SHOW' AND imdb_score IS NOT NULL AND seasons = 1
 ) subquery
-```
 
-### Average IMDB Score of Shows with Multiple Seasons
-```sql
+-- multiple seasons
 SELECT AVG(imdb_score) AS avg_imdb_score_mult
 FROM(
 SELECT seasons, imdb_score
@@ -213,6 +215,10 @@ FROM Netflix
 WHERE type = 'SHOW' AND imdb_score IS NOT NULL AND seasons > 1
 ) subquery
 ```
+![Screenshot (285)](https://github.com/mbalderrama23/NetflixProject/assets/110944925/69c148d3-ff6d-4d07-ae84-c7cb0329101e) ![Screenshot (286)](https://github.com/mbalderrama23/NetflixProject/assets/110944925/7b8bdca8-963d-4b9d-9f6a-aeed1364164f)
+
+
+
 
 
 
