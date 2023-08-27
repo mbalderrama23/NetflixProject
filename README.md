@@ -54,6 +54,7 @@ WHERE type = 'MOVIE' AND imdb_score IS NOT NULL
 ORDER BY imdb_score 
 ```
 ![Screenshot (270)](https://github.com/mbalderrama23/NetflixProject/assets/110944925/8e95d4ad-86f9-427c-b2e3-d125736defd8) ![Screenshot (271)](https://github.com/mbalderrama23/NetflixProject/assets/110944925/86d34444-0487-4b02-bb5e-82cecfa8b851)
+
 The highest rated movies are *Chhota Bheem & Krishna vs Zimbara* and *Major* with an IMDB score of 9.6, while the lowest rated show is *Aerials* with an IMDB score of 1.5.
 
 
@@ -76,6 +77,7 @@ GROUP BY age_certification
 ORDER BY show_count DESC
 ```
 ![Screenshot (272)](https://github.com/mbalderrama23/NetflixProject/assets/110944925/5946e693-5772-466e-acbb-c228ab2ccec0) ![Screenshot (273)](https://github.com/mbalderrama23/NetflixProject/assets/110944925/ddc9a9bf-01b0-4f57-94cd-02fca6eb8920)
+
 Netflix has 556 movies that are rated R, and 883 TV shows that are rated TV-MA. However, the highest rated in the movie age category are PG-13 and G, while the highest rated in the TV show category is TV-14.
 
 
@@ -94,6 +96,7 @@ GROUP BY era
 ORDER BY era
 ```
 ![Screenshot (274)](https://github.com/mbalderrama23/NetflixProject/assets/110944925/fe74e3d7-ae43-4175-86e7-2cedece77cbb)
+
 Most of Netflix's movies & TV shows released from 2010-2019. However, the 2020-2022 is second with only 3 years opposed to 10 and will likely surpass the 2010's time period at this rate. Also, Netflix only has 1 television show that released in the 1940's.
 
 
@@ -111,6 +114,7 @@ GROUP BY genres
 ORDER BY total_count DESC
 ```
 ![Screenshot (275)](https://github.com/mbalderrama23/NetflixProject/assets/110944925/4697ff60-7b9c-42cc-b004-bf087ba63a55)
+
 The most common genre in Netflix is comedy. However, documentation is the second most common, but the highest rated genre.
 
 
@@ -157,6 +161,7 @@ GROUP BY imdb_score
 ORDER BY imdb_score ASC) AS subquery
 ```
 ![Screenshot (278)](https://github.com/mbalderrama23/NetflixProject/assets/110944925/41c941a5-3c5f-4ed0-9759-ea55a2f855d7) ![Screenshot (279)](https://github.com/mbalderrama23/NetflixProject/assets/110944925/4875c4e0-0b1f-4dbe-a4e2-71aef82813c6)
+
 From this query, we can see that higher rated TV shows have a longer average duration with a 5 minute differential from lower rated TV shows.
 
 
@@ -169,6 +174,7 @@ GROUP BY production_countries
 ORDER BY country_count DESC
 ```
 ![Screenshot (280)](https://github.com/mbalderrama23/NetflixProject/assets/110944925/dce754ab-74e5-4cd1-a59c-67b29fbda1bd)
+
 The United States produce the most movies & TV shows, over 3x the amount of the second most in India. The country with the highest average IMDB score within the top 10 most production count is Korea.
 
 
@@ -184,6 +190,7 @@ HAVING COUNT(*) >= 5
 ORDER BY num_of_movies_directed DESC, avg_score DESC
 ```
 ![Screenshot (281)](https://github.com/mbalderrama23/NetflixProject/assets/110944925/5f825591-e43f-4851-ab31-b9156ba45600) ![Screenshot (282)](https://github.com/mbalderrama23/NetflixProject/assets/110944925/c897dd52-d7b4-412d-aba5-f70588f3e698)
+
 Out of the directors who have directed 5 or more movies, Raul Campos directed the most movies, while Martin Scorsese has the highest average rating out of the movies he has directed.
 
 
@@ -223,6 +230,7 @@ WHERE type = 'SHOW' AND imdb_score IS NOT NULL AND seasons > 1
 ) subquery
 ```
 ![Screenshot (285)](https://github.com/mbalderrama23/NetflixProject/assets/110944925/69c148d3-ff6d-4d07-ae84-c7cb0329101e) ![Screenshot (286)](https://github.com/mbalderrama23/NetflixProject/assets/110944925/7b8bdca8-963d-4b9d-9f6a-aeed1364164f)
+
 TV shows with multiple seasons, on average, have a higher IMDB score than shows with only one season on Netflix.
 
 
