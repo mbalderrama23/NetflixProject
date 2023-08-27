@@ -234,6 +234,15 @@ WHERE type = 'SHOW' AND imdb_score IS NOT NULL AND seasons > 1
 TV shows with multiple seasons, on average, have a higher IMDB score than shows with only one season on Netflix.
 
 
+## Netflix Visualization Dashboard
+I created this dashboard in Tableau 
+
+
+[](https://public.tableau.com/views/NetflixDashboard_16930421786460/NetflixDashboard?:language=en-US&publish=yes&:display_count=n&:origin=viz_share_link)
+
+
+
+
 
 ## Conclusion
 
