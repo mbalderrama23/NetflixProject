@@ -11,7 +11,7 @@ Through the strategic utilization of SQL and Tableau, we aim to orchestrate the 
 ```sql
 
 ```
-## Data Exploration
+## Data Exploration & Analysis
 These 3 variables were imported as floats, but we are going to round to the tenth for simplication purposes.
 ```sql
 -- imported imdb_score, tmdb_popularity, tmdb_score
