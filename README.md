@@ -8,9 +8,7 @@ Netflix is an America subscription based streaming service that offers a wide va
 ## Project Objective
 Through the strategic utilization of SQL and Tableau, we aim to orchestrate the transformation and manipulation of data, complemented by the delivery of insightful visualizations. This synthesis of analytical tools facilitates the extraction of profound insights, culminating in an enhanced comprehension of the intricate interplay between content dynamics and audience preferences.
 
-```sql
 
-```
 ## Data Exploration & Analysis
 These 3 variables were imported as floats, but we are going to round to the tenth for simplication purposes.
 ```sql
@@ -22,55 +20,63 @@ SET imdb_score = ROUND(imdb_score, 1),
 	tmdb_score = ROUND(tmdb_score, 1)
 ```
 
-### Top 10 Shows Ranked by IMDB Score
+
+### Top/Bottom 10 Shows Ranked by IMDB Score
 ```sql
+-- top 10 shows
 SELECT TOP(10) title, imdb_score
 FROM Netflix
 WHERE type = 'SHOW'
 ORDER BY imdb_score DESC
-```
 
-### Bottom 10 Shows Ranked by IMDB Score
-```sql
+--bottom 10 shows
 SELECT TOP(10) title, imdb_score
 FROM Netflix
 WHERE type = 'SHOW' AND imdb_score IS NOT NULL
 ORDER BY imdb_score 
 ```
+![Screenshot (268)](https://github.com/mbalderrama23/NetflixProject/assets/110944925/4ae6e897-32ac-437f-aba3-553cc043800c) ![Screenshot (269)](https://github.com/mbalderrama23/NetflixProject/assets/110944925/fa4a517c-1d08-4468-83b5-e506d5bc8d2c)
 
-### Top 10 Movies Ranked by IMDB Score
+### Top/Bottom 10 Movies Ranked by IMDB Score
 ```sql
+-- top 10 movies
 SELECT TOP(10) title, imdb_score
 FROM Netflix
 WHERE type = 'MOVIE' 
 ORDER BY imdb_score DESC
-```
 
-### Bottom 10 Movies Ranked by IMDB Score
-```sql
+--bottom 10 movies
 SELECT TOP(10) title, imdb_score
 FROM Netflix
 WHERE type = 'MOVIE' AND imdb_score IS NOT NULL
 ORDER BY imdb_score 
 ```
+![Screenshot (270)](https://github.com/mbalderrama23/NetflixProject/assets/110944925/8e95d4ad-86f9-427c-b2e3-d125736defd8) ![Screenshot (271)](https://github.com/mbalderrama23/NetflixProject/assets/110944925/86d34444-0487-4b02-bb5e-82cecfa8b851)
 
-### Number of Age Category Ratings for Movies with Associated Ratings
+
+
+
+
+### Number of Age Category Ratings for Movies/Shows with Associated Ratings
 ```sql
+--movies
 SELECT age_certification, COUNT(*) AS movie_count, ROUND(AVG(imdb_score),1) AS avg_imdb_score
 FROM Netflix
 WHERE type = 'MOVIE' AND age_certification <> 'N/A'
 GROUP BY age_certification
 ORDER BY movie_count DESC
-```
 
-### Number of Age Category Ratings for Shows with Associated Ratings
-```sql
+--shows
 SELECT age_certification, COUNT(*) AS show_count, ROUND(AVG(imdb_score),1) AS avg_imdb_score 
 FROM Netflix
 WHERE type = 'SHOW' AND age_certification <> 'N/A'
 GROUP BY age_certification
 ORDER BY show_count DESC
 ```
+![Screenshot (272)](https://github.com/mbalderrama23/NetflixProject/assets/110944925/5946e693-5772-466e-acbb-c228ab2ccec0) ![Screenshot (273)](https://github.com/mbalderrama23/NetflixProject/assets/110944925/ddc9a9bf-01b0-4f57-94cd-02fca6eb8920)
+
+
+
 
 ### Movies and Show Count by Time Period
 ```sql
