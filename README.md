@@ -6,8 +6,7 @@ Netflix is an America subscription based streaming service that offers a wide va
 
 
 ## Project Objective
-Through the strategic utilization of SQL and Tableau, we aim to orchestrate the transformation and manipulation of data, complemented by the delivery of insightful visualizations. This synthesis of analytical tools facilitates the extraction of profound insights, culminating in an enhanced comprehension of the intricate interplay between content dynamics and audience preferences.
-
+Through the utilization of SQL and Tableau, we aim to orchestrate the transformation and manipulation of data, complemented by the delivery of insightful visualizations. Our goal is to use these tools in order to extract insights and culminate an enhanced comprehension of audience preferences and content dynamics. 
 
 ## Data Exploration & Analysis
 These 3 variables were imported as floats, but we are going to round to the tenth for simplication purposes.
@@ -242,8 +241,8 @@ I created a [Netflix Visualization Dashboard](https://public.tableau.com/views/N
 
 
 
-
 ## Conclusion
+Our exploration encompassed the distinction between highly-rated and lower-scoring TV shows and movies, the ascendancy of popular genres, the dispersion of content across release years and countries, as well as the significance of age categories and their associated score disparities. This examination of multifaceted dimensions empowers Netflix viewers seeking discernment. Whether embarking on tailored show recommendations, charting a course into uncharted genres, exploring foreign cinematic treasures, or judiciously evading content that doesn't align with their preferences, these insights serve as a guiding compass, enriching the content journey for avid Netflix enthusiasts.
 
 
 
