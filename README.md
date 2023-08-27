@@ -88,6 +88,7 @@ ORDER BY era
 
 ### Frequency of Genres with Associated Ratings
 ```sql
+--- replacing genres with empty list to N/A
 UPDATE Netflix
 SET genres = 'N/A'
 WHERE genres = '[]'
