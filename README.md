@@ -237,6 +237,7 @@ TV shows with multiple seasons, on average, have a higher IMDB score than shows 
 ## Netflix Visualization Dashboard
 I created a [Netflix Visualization Dashboard](https://public.tableau.com/views/NetflixDashboard_16930421786460/NetflixDashboard?:language=en-US&publish=yes&:display_count=n&:origin=viz_share_link) in Tableau that enables users to select either a movie or a TV show and specify the title. Upon selecting these parameters, the dashboard presents details including age category, rating, duration, production country, release year, genre, and a brief description of the chosen movie or TV show. The dashboard also charts and maps visualizing the various trends and distributions of movies & TV shows in Netflix. 
 
+![Screenshot (288)](https://github.com/mbalderrama23/NetflixProject/assets/110944925/80ea6cab-279b-4b19-8082-19bc67b9b291)
 
 
 
