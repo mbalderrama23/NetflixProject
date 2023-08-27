@@ -91,6 +91,8 @@ FROM (
 GROUP BY era
 ORDER BY era
 ```
+![Screenshot (274)](https://github.com/mbalderrama23/NetflixProject/assets/110944925/fe74e3d7-ae43-4175-86e7-2cedece77cbb)
+
 
 ### Frequency of Genres with Associated Ratings
 ```sql
@@ -105,6 +107,8 @@ WHERE genres <> 'N/A'
 GROUP BY genres
 ORDER BY total_count DESC
 ```
+![Screenshot (275)](https://github.com/mbalderrama23/NetflixProject/assets/110944925/4697ff60-7b9c-42cc-b004-bf087ba63a55)
+
 
 ### Average Duration of Highest & Lowest Rated Movies
 ```sql
@@ -124,8 +128,13 @@ WHERE runtime <> 0 AND type='MOVIE' AND imdb_score IS NOT NULL
 GROUP BY imdb_score
 ORDER BY imdb_score ASC) AS subquery
 ```
+![Screenshot (276)](https://github.com/mbalderrama23/NetflixProject/assets/110944925/f6801df7-d33c-41d8-b5e5-51243d19a72d) ![Screenshot (277)](https://github.com/mbalderrama23/NetflixProject/assets/110944925/49f5ca90-4769-49ae-a748-f49a09665286)
 
-### Average Duration of Highest & Lowest Rated Movies
+
+
+
+
+### Average Duration of Highest & Lowest Rated Shows
 ```sql
 -- looking at average duration of top 50 highest rated shows
 SELECT AVG(avg_movie_duration) AS avg_duration_highrated_shows
@@ -143,6 +152,10 @@ WHERE runtime <> 0 AND type='SHOW' AND imdb_score IS NOT NULL
 GROUP BY imdb_score
 ORDER BY imdb_score ASC) AS subquery
 ```
+![Screenshot (278)](https://github.com/mbalderrama23/NetflixProject/assets/110944925/41c941a5-3c5f-4ed0-9759-ea55a2f855d7) ![Screenshot (279)](https://github.com/mbalderrama23/NetflixProject/assets/110944925/4875c4e0-0b1f-4dbe-a4e2-71aef82813c6)
+
+
+
 
 ### Individual Average IMDB Score of Directors who have Directed 5+ Movies
 ```sql
