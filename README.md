@@ -88,6 +88,10 @@ ORDER BY era
 
 ### Frequency of Genres with Associated Ratings
 ```sql
+UPDATE Netflix
+SET genres = 'N/A'
+WHERE genres = '[]'
+
 SELECT TOP(10) genres, COUNT(*) AS total_count, ROUND(AVG(imdb_score),1) AS avg_imdb_score
 FROM Netflix
 WHERE genres <> 'N/A'
