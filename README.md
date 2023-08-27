@@ -156,6 +156,16 @@ ORDER BY imdb_score ASC) AS subquery
 
 
 
+### Top 10 Countries by Production with Associated Ratings
+```sql
+SELECT TOP(10) SUBSTRING(production_countries,3,2) AS Countries, COUNT(*) AS country_count, ROUND(AVG(imdb_score),1) AS avg_imdb_score
+FROM Netflix
+WHERE LEN(production_countries) = 6 AND imdb_score IS NOT NULL
+GROUP BY production_countries
+ORDER BY country_count DESC
+```
+![Screenshot (280)](https://github.com/mbalderrama23/NetflixProject/assets/110944925/dce754ab-74e5-4cd1-a59c-67b29fbda1bd)
+
 
 ### Individual Average IMDB Score of Directors who have Directed 5+ Movies
 ```sql
@@ -168,18 +178,9 @@ GROUP BY cred.name
 HAVING COUNT(*) >= 5
 ORDER BY num_of_movies_directed DESC, avg_score DESC
 ```
+![Screenshot (281)](https://github.com/mbalderrama23/NetflixProject/assets/110944925/5f825591-e43f-4851-ab31-b9156ba45600) ![Screenshot (282)](https://github.com/mbalderrama23/NetflixProject/assets/110944925/c897dd52-d7b4-412d-aba5-f70588f3e698)
 
-### Individual Average IMDB Score of Directors who have Directed 5+ Movies
-```sql
-SELECT cred.name, COUNT(*) AS num_of_movies_directed, ROUND(AVG(net.imdb_score),1) AS avg_score
-FROM Netflix net
-JOIN credits cred 
-ON net.id = cred.id
-WHERE cred.role = 'DIRECTOR' AND net.imdb_score IS NOT NULL AND net.type = 'MOVIE'
-GROUP BY cred.name
-HAVING COUNT(*) >= 5
-ORDER BY num_of_movies_directed DESC, avg_score DESC
-```
+
 
 ### Individual Average IMDB Score of Actors who have Acted 10+ Movies
 ```sql
