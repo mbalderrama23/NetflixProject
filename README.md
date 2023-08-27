@@ -176,7 +176,7 @@ ORDER BY num_of_movies_acted DESC, avg_score DESC
 
 ### Average IMDB Score of Shows with Single Season
 ```sql
-SELECT AVG(imdb_score) AS avg_imdb_score
+SELECT AVG(imdb_score) AS avg_imdb_score_sing
 FROM(
 SELECT seasons, imdb_score
 FROM Netflix
@@ -186,7 +186,7 @@ WHERE type = 'SHOW' AND imdb_score IS NOT NULL AND seasons = 1
 
 ### Average IMDB Score of Shows with Multiple Seasons
 ```sql
-SELECT AVG(imdb_score) AS avg_imdb_score
+SELECT AVG(imdb_score) AS avg_imdb_score_mult
 FROM(
 SELECT seasons, imdb_score
 FROM Netflix
