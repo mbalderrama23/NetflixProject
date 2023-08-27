@@ -10,3 +10,15 @@ Through the strategic utilization of SQL and Tableau, we aim to orchestrate the 
 
 
 ## Data Exploration
+These 3 variables were imported as floats, but we are going to round to the tenth for simplication purposes.
+```sql
+-- imported imdb_score, tmdb_popularity, tmdb_score
+-- we will round imdb_score, tmdb_popularity, tmdb_score by 1 decimal place
+UPDATE Netflix
+SET imdb_score = ROUND(imdb_score, 1),
+	tmdb_popularity = ROUND(tmdb_popularity, 1),
+	tmdb_score = ROUND(tmdb_score, 1)
+```
+
+
+
